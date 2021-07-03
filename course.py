@@ -1,5 +1,7 @@
+import os
 from time import time
-import re
+from PIL import Image, ImageFilter
+import sys
 
 def performance(fn):
     def wrapper(*args, **kwargs):
@@ -10,14 +12,28 @@ def performance(fn):
         return result
     return wrapper
 
-'''
-Password:
-> at least 8 characters long;
-> may contain any sort of letters, numbers, and $%&@
-'''
+# grab args 1 and 2
+# check if arg 2 folder exists, if not create
 
-password = input("Enter string to test: ")
-if re.fullmatch(r'[A-Za-z0-9@#$%^&+=]{8,}\d+$', password):
-    print('zjbs')
+path_old = (sys.argv[1])
+
+if os.path.isdir(sys.argv[2]) == True:
+    path_new = (sys.argv[2])
 else:
-    print('xuijne')
+    os.mkdir(sys.argv[2])
+    path_new = (sys.argv[2])
+
+
+# loop through arg1 folder
+
+
+for filename in os.listdir(path_old):
+    if filename.endswith(".jpg"):
+        img = Image.open(path_old + "\\" + filename)
+        img.save(path_new + "\\" + filename[0:-4] + ".png", "png")
+
+# convert them to png
+# save them into the arg2 folder
+
+
+

@@ -25,7 +25,7 @@ titles = [item['snippet']['title'] for item in itemai]
 print(titles)
 
 sp = spotipy.Spotify(auth_manager=SpotifyOAuth( client_id=input('Please input client ID: '),
-                                                client_secret=input('Please input client secret'),
+                                                client_secret=input('Please input client secret: '),
                                                 redirect_uri="http://localhost:9000",
                                                 scope=scope))
 

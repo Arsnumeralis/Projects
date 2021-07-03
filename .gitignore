@@ -1,1 +1,4 @@
 .cache
+course.py
+.vscode
+__pycache__
