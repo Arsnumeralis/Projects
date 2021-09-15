@@ -2,7 +2,7 @@ import random
 while True:
     #word = input("Enter a word or press ENTER to exit: ")
     raw_pool = open(
-        "C:\\Users\\pmick\\OneDrive\\Pulpit\\Python\\Hangman\\ukenglish.txt", "r")
+        "C:\\Users\\pmick\\Desktop\\Python\\Projects\\Hangman\\ukenglish.txt", "r")
     pool = [line for line in raw_pool.readlines()]
     rand = random.randint(0, len(pool))
     word = pool[rand].replace("\n", "").upper()
