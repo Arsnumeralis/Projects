@@ -1,8 +1,9 @@
 import random
 while True:
+    #commented sections are for use without the dictionary where one player thinks of the word and the others guess
     #word = input("Enter a word or press ENTER to exit: ")
     raw_pool = open(
-        "C:\\Users\\pmick\\Desktop\\Python\\Projects\\Hangman\\ukenglish.txt", "r")
+        "ukenglish.txt", "r")
     pool = [line for line in raw_pool.readlines()]
     rand = random.randint(0, len(pool))
     word = pool[rand].replace("\n", "").upper()
@@ -59,7 +60,7 @@ while True:
                 print('''
                  ________
                  |      |
-                 |      0
+                 |      O
                  |
                  |
                  |
@@ -70,7 +71,7 @@ while True:
                 print('''
                  ________
                  |      |
-                 |      0
+                 |      O
                  |      |
                  |      |
                  |
@@ -81,7 +82,7 @@ while True:
                 print('''
                  ________
                  |      |
-                 |      0
+                 |      O
                  |     /|
                  |      |
                  |
@@ -92,7 +93,7 @@ while True:
                 print('''
                  ________
                  |      |
-                 |      0
+                 |      O
                  |     /|\\
                  |      |
                  |
@@ -103,7 +104,7 @@ while True:
                 print('''
                  ________
                  |      |
-                 |      0
+                 |      O
                  |     /|\\
                  |      |
                  |     /

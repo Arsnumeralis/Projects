@@ -2,3 +2,4 @@
 course.py
 .vscode
 __pycache__
+.email_sender
